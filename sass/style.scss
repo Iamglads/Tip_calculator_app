@@ -1,0 +1,160 @@
+
+@import "./variables";
+@import "./header";
+@import "./footer";
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: $Light_grayish_cyan1;
+    font-family: $main_font;
+    color: $Dark_grayish_cyan1;
+    font-weight: 700;
+
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+h1, h2{
+    font-size: 14px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    max-width: 800px;
+    background-color: $White;
+    border-radius: 20px;
+    padding: 2em;
+
+    @media screen and (min-width: 900px) {
+        display:  flex;
+        justify-content: space-between;
+    }
+}
+
+.select__tip {
+
+    input{
+        width: 100%;
+        height: 40px;
+        background-color:  $Light_grayish_cyan2;
+        border: none;
+        border-radius: 5px;
+        font-size: $size;
+        color: $Very_dark_cyan;
+        font-weight: 700;
+        font-family: $main_font;
+        text-align: right;
+    }
+
+    &--bill, &--number{
+        background-repeat: no-repeat;
+        background-position: 3% 50%;
+        font-size: 24px;
+        float: right;
+     
+    }
+
+    &--bill{
+        background-image: url(../images/icon-dollar.svg);
+    }
+    
+    &--number{
+        background-image: url(../images/icon-person.svg);
+    }
+
+    &--btns{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        button, .custom{
+            width: 45%;
+            color:  $White;
+            background-color: $Very_dark_cyan;
+            border-radius: 5px;
+            padding: 0.2em;
+            border: none;
+            font-size: 24px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            &:hover {
+                color: $Very_dark_cyan;
+                background-color: $Strong_cyan;
+            }
+        }
+
+        .custom {
+            color: $Dark_grayish_cyan2;
+            background-color: $Light_grayish_cyan2;
+            font-weight: 700;
+        }
+
+    }
+
+    @media screen and (min-width: 900px) {
+        width: 45%;
+    }
+    
+}
+
+.display__result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $Very_dark_cyan;
+    padding: 1em 2em;
+    border-radius: 10px;
+        &--amount, &--total{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+    
+        .display_amount,
+        .display_total{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: $size;
+            color: $Strong_cyan;
+        }
+
+    .btn-reset{
+        width: 100%;
+        background-color: $Strong_cyan;
+        border: none;
+        font-size: 24px;
+        border-radius: 5px;
+        padding: 0.5em;
+        border: none;
+        cursor: pointer;
+        &:hover{
+            background-color: $Light_grayish_cyan1;
+        }
+    }
+    h2{
+        color: $White;
+    }
+
+    @media screen and (min-width: 900px) {
+        width: 45%;
+    }
+}
+
+
