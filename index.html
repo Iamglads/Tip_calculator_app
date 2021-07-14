@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="stylesheet" href="./css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+	<title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+
+<main>
+	<div>
+		<header>
+			<img src="./images/logo.svg" alt="logo">
+		</header>
+		<section class="container">
+			<!-- COLLECT DATA BLOC-->
+			<div class="select__tip">
+				<form>
+					<div>
+						<label>Bill</label>
+						<input class="select__tip--bill" type="number" placeholder="0.00">
+					</div>
+					<h1>Select Tip %</h1>
+					<div class="select__tip--btns">
+						<button class="btn-tips" value="1.05">5%</button>
+						<button class="btn-tips" value="1.10">10%</button>
+						<button class="btn-tips" value="1.15">15%</button>
+						<button class="btn-tips" value="1.25">25%</button>
+						<button class="btn-tips" value="1.50">50%</button>
+						<input class="custom btn-tips" type="number" placeholder="Custom">
+					</div>
+					<div>
+						<div style="display: flex; justify-content: space-between;">
+							<label>Number of People</label>
+							<span class="feedback-number" style="color: red;"></span>
+						</div>
+						<input class="select__tip--number" type="number" placeholder="0">
+					</div>
+				</form>
+			</div>
+			<!-- COLLECT  DATA END-->
+			<!-- DISPLAY RESULT BLOC-->
+			<div class="display__result">
+				<div>
+					<div class="display__result--amount">
+						<div>
+							<h2>Tip Amount</h2>
+							<span>/ person</span>
+						</div>
+						<div class="display_amount"> $<span class="tip-amount">0.00</span></div>
+					</div>
+					<div class="display__result--total">
+						<div>
+							<h2>Total</h2>
+							<span>/ person</span>
+						</div>
+						<div class="display_total"> $<span class="total-person">0.00</span></div>
+					</div>
+				</div>
+				<button class="btn btn-reset" type="reset">RESET</button>
+			</div>
+			<!-- DISPLAY RESULT BLOC END-->
+		</section>
+	</div>
+  </main>
+<!--
+  Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset
+
+  -->
+  
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="www.glad-ston.fr">Gladston Aristoverne</a>.
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+</html>
