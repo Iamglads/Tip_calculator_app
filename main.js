@@ -23,17 +23,24 @@ for(let i = 0; i < tipsBtns.length; i++) {
         } 
         else {
             tipsBtns[i].style.backgroundColor = "#26c0ab"
-            totalTips.innerHTML = tipsAmount(calculerTips(billValue, tipsValue), billValue)
-            totalPerson.innerHTML = tipsAmountPerPerson(billValue, calculerTips(billValue, tipsValue), numberPersonValue)
-            console.log("% du tip:" + tipsValue)
+            totalTips.innerHTML = Number.parseFloat( tipsAmount(calculerTips(billValue, tipsValue), billValue)).toFixed(2)
+            totalPerson.innerHTML = Number.parseFloat(tipsAmountPerPerson(billValue, calculerTips(billValue, tipsValue), numberPersonValue)).toFixed(2)
+
+            
+       /*   console.log("% du tip:" + tipsValue)
             console.log(calculerTips(billValue, tipsValue))
-            console.log(tipsAmountPerPerson(billValue, calculerTips(billValue, tipsValue), numberPersonValue))
+            console.log(tipsAmountPerPerson(billValue, calculerTips(billValue, tipsValue), numberPersonValue)) 
+        */
         }
     })
 }
 
+btnReset.addEventListener('click', () => {
+    location.reload()
+})
+
 function calculerTips (bill, tip) {
-    return Number.parseFloat(bill * tip).toFixed(2)
+    return bill * tip
 }
 
 function tipsAmount (totalWithTips, bill) {

@@ -40,11 +40,13 @@ main {
     max-width: 800px;
     background-color: $White;
     border-radius: 20px;
-    padding: 2em;
-
-    @media screen and (min-width: 900px) {
-        display:  flex;
-        justify-content: space-between;
+    
+    .container__bloc{
+        padding: 2em;
+        @media screen and (min-width: 900px) {
+            display:  flex;
+            justify-content: space-between;
+        }
     }
 }
 
@@ -90,7 +92,8 @@ main {
             border-radius: 5px;
             padding: 0.2em;
             border: none;
-            font-size: 24px;
+            font-size: $size;
+            font-family: $main_font;
             margin-bottom: 5px;
             cursor: pointer;
             &:hover {
@@ -139,7 +142,9 @@ main {
         width: 100%;
         background-color: $Strong_cyan;
         border: none;
-        font-size: 24px;
+        font-family: $main_font;
+        font-size: $size;
+        font-weight: 700;
         border-radius: 5px;
         padding: 0.5em;
         border: none;
